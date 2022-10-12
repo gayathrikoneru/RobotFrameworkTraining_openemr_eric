@@ -34,7 +34,7 @@ Verify Valid Credential Template
     Select From List By Label    name=languageChoice    ${language}
     Click Button    id=login-button
     Set Selenium Implicit Wait    5s
-    ${res}    Title Should Be    ${expected_title}
+    Title Should Be    ${expected_title}
 
 # Logging Template
 #     [Arguments]    ${arg}
