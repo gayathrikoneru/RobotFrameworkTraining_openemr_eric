@@ -11,6 +11,8 @@ Test Template       Verify Invalid Credential Template
 *** Test Cases ***
 TC1    john    john123    English (Indian)    Invalid username or password
 
+TC2    kaira    kaira145    Danish    Invalid username or password
+
 
 *** Keywords ***
 Verify Invalid Credential Template

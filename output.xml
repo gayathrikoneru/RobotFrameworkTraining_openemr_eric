@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221012 13:03:46.376" rpa="false" schemaversion="3">
+<suite id="s1" name="Verify Invalid Credential Suite" source="c:\Users\edevgay\Desktop\RobotTraining\openemr_framework\login_suite\verify_invalid_credential_suite.robot">
+<test id="s1-t1" name="TC2" line="14">
+<kw name="Launch Browser And Navigate To OpenEMR" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>executable_path=C:${/}Users${/}edevgay${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221012 13:03:46.916" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221012 13:03:46.915" endtime="20221012 13:03:48.631"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221012 13:03:48.631" endtime="20221012 13:03:48.766"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221012 13:03:48.767" endtime="20221012 13:03:48.769"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://demo.openemr.io/b/openemr</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221012 13:03:48.770" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<status status="PASS" starttime="20221012 13:03:48.769" endtime="20221012 13:03:51.729"/>
+</kw>
+<status status="PASS" starttime="20221012 13:03:46.914" endtime="20221012 13:03:51.730"/>
+</kw>
+<kw name="Verify Invalid Credential Template">
+<arg>kaira</arg>
+<arg>kaira145</arg>
+<arg>Danish</arg>
+<arg>Invalid username or password</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=authUser</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 13:03:51.732" level="INFO">Typing text 'kaira' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20221012 13:03:51.731" endtime="20221012 13:03:51.836"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=clearPass</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 13:03:51.836" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20221012 13:03:51.887" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221012 13:03:51.943" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221012 13:03:51.836" endtime="20221012 13:03:51.943"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=languageChoice</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20221012 13:03:51.944" level="INFO">Selecting options from selection list 'name=languageChoice' by label Danish.</msg>
+<status status="PASS" starttime="20221012 13:03:51.943" endtime="20221012 13:03:52.030"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 13:03:52.031" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20221012 13:03:52.030" endtime="20221012 13:03:53.417"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221012 13:03:53.417" endtime="20221012 13:03:53.419"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Invalid')]</arg>
+<arg>${expected_title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221012 13:03:53.446" level="INFO">Element '//div[contains(text(),'Invalid')]' contains text 'Invalid username or password'.</msg>
+<status status="PASS" starttime="20221012 13:03:53.419" endtime="20221012 13:03:53.446"/>
+</kw>
+<status status="PASS" starttime="20221012 13:03:51.731" endtime="20221012 13:03:53.446"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221012 13:03:53.447" endtime="20221012 13:03:55.657"/>
+</kw>
+<status status="PASS" starttime="20221012 13:03:46.913" endtime="20221012 13:03:55.658"/>
+</test>
+<doc>This suite file handles testcases related to valid credentials</doc>
+<status status="PASS" starttime="20221012 13:03:46.384" endtime="20221012 13:03:55.660"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Verify Invalid Credential Suite">Verify Invalid Credential Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
