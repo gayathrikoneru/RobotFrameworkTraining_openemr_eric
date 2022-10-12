@@ -8,6 +8,10 @@ Test Teardown       Close Browser
 Test Template       Verify Invalid Credential Template
 
 
+*** Test Cases ***
+TC1    john    john123    English (Indian)    Invalid username or password
+
+
 *** Keywords ***
 Verify Invalid Credential Template
     [Arguments]    ${username}    ${password}    ${language}    ${expected_title}
@@ -16,4 +20,4 @@ Verify Invalid Credential Template
     Select From List By Label    name=languageChoice    ${language}
     Click Button    id=login-button
     Set Selenium Implicit Wait    5s
-    
+    Element Should Contain    //div[contains(text(),'Invalid')]    ${expected_title}
