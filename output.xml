@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221012 10:06:29.794" rpa="false" schemaversion="3">
+<suite id="s1" name="Verify Valid Credential Suite" source="c:\Users\edevgay\Desktop\RobotTraining\openemr_framework\login_suite\verify_valid_credential_suite.robot">
+<test id="s1-t1" name="Verify valid credential test" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>executable_path=C:${/}Users${/}edevgay${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221012 10:06:30.223" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221012 10:06:30.221" endtime="20221012 10:06:31.966"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221012 10:06:31.966" endtime="20221012 10:06:32.128"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221012 10:06:32.130" endtime="20221012 10:06:32.134"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://demo.openemr.io/b/openemr</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221012 10:06:32.136" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<status status="PASS" starttime="20221012 10:06:32.135" endtime="20221012 10:06:34.913"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=authUser</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 10:06:34.916" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20221012 10:06:34.915" endtime="20221012 10:06:35.022"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=clearPass</arg>
+<arg>pass</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221012 10:06:35.024" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20221012 10:06:35.075" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221012 10:06:35.127" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221012 10:06:35.023" endtime="20221012 10:06:35.127"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=languageChoice</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20221012 10:06:35.130" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20221012 10:06:35.130" endtime="20221012 10:06:35.233"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221012 10:06:35.236" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20221012 10:06:35.235" endtime="20221012 10:06:38.383"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221012 10:06:38.386" endtime="20221012 10:06:38.391"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OpenEMR</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221012 10:06:38.416" level="INFO">Page title is 'OpenEMR'.</msg>
+<status status="PASS" starttime="20221012 10:06:38.392" endtime="20221012 10:06:38.416"/>
+</kw>
+<status status="PASS" starttime="20221012 10:06:30.218" endtime="20221012 10:06:38.417"/>
+</test>
+<doc>This suite file handles testcases related to valid credentials
+conneccted with scenario- and tc-</doc>
+<status status="PASS" starttime="20221012 10:06:29.801" endtime="20221012 10:06:38.419"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Verify Valid Credential Suite">Verify Valid Credential Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
