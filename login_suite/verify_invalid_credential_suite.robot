@@ -16,10 +16,10 @@ TC2    kaira    kaira145    Danish    Invalid username or password
 
 *** Keywords ***
 Verify Invalid Credential Template
-    [Arguments]    ${username}    ${password}    ${language}    ${expected_title}
+    [Arguments]    ${username}    ${password}    ${language}    ${expected_error}
     Input Text    id=authUser    ${username}
     Input Password    id=clearPass    ${password}
     Select From List By Label    name=languageChoice    ${language}
     Click Button    id=login-button
     Set Selenium Implicit Wait    5s
-    Element Should Contain    //div[contains(text(),'Invalid')]    ${expected_title}
+    Element Should Contain    //div[contains(text(),'Invalid')]    ${expected_error}
