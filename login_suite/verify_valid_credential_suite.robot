@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation       This suite file handles testcases related to valid credentials
-...                 connected with scenario- and tc-
 
 Resource            ../resource/base/CommonFunctionality.resource
 
@@ -11,18 +10,20 @@ Test Template       Verify Valid Credential Template
 
 *** Test Cases ***
 TC1    admin    pass    English (Indian)    OpenEMR
+
 TC2
     physician    physician    English (Indian)    OpenEMR
-TC3
-    [Template]    NONE    #works without giving NONE also (for [Setup] and [Teardown] as well)
-    [Setup]    NONE
-    Log To Console    sample tc
-    [Teardown]    NONE
-TC4
-    [Template]    Logging Template
-    [Setup]    NONE
-    hello world!
-    [Teardown]    NONE
+
+# TC3
+#     [Template]    NONE    #works without giving NONE also (for [Setup] and [Teardown] as well)
+#     [Setup]    NONE
+#     Log To Console    sample tc
+#     [Teardown]    NONE
+# TC4
+#     [Template]    Logging Template
+#     [Setup]    NONE
+#     hello world!
+#     [Teardown]    NONE
 
 
 *** Keywords ***
@@ -35,6 +36,6 @@ Verify Valid Credential Template
     Set Selenium Implicit Wait    5s
     ${res}    Title Should Be    ${expected_title}
 
-Logging Template
-    [Arguments]    ${arg}
-    Log To Console    ${arg}
+# Logging Template
+#     [Arguments]    ${arg}
+#     Log To Console    ${arg}
